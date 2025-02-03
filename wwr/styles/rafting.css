@@ -1,122 +1,151 @@
+/* Root Variables */
 :root {
-  --primary-color: #6667AB;
-  --secondary-color: #f0f0f0;
-  --accent-color: #FFA500;
+  --primary-color: #004080; /* Dark blue */
+  --secondary-color: #f0f8ff; /* Light blue */
+  --text-color: #333; /* Dark grey for text */
+  --footer-color: #004080; /* Dark blue for footer */
+  --img-max-width: 100%; /* Responsive images */
 }
 
+/* General Styles */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1200px; /* Limits width for easier design */
+  margin: 0 auto; /* Centers the body content */
 }
 
+/* Header Styles */
 header {
-  background-color: var(--primary-color);
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: auto 1fr auto; /* Responsive grid for logo, title, and nav */
   align-items: center;
-  padding: 20px;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
 }
 
-header img {
-  width: 80px;
+header .logo {
+  width: 70px; /* Logo size */
+}
+
+header h1 {
+  color: white;
+  text-align: center;
+}
+
+nav {
+  margin-left: auto; /* Push navigation to the right */
 }
 
 nav ul {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
+  display: flex; /* Use Flexbox for horizontal layout */
+  list-style: none;
   padding: 0;
-  justify-content: flex-end;
+  margin: 0;
 }
 
-nav li {
+nav ul li {
   margin-left: 20px;
 }
 
-nav a {
+nav ul li a {
   color: white;
   text-decoration: none;
 }
 
+/* Hero Section Styles */
 .hero {
-  background-image: url('placeholder-image.png');
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  position: relative;
   text-align: center;
+  overflow: hidden; /* Ensure no image overflow */
+}
+
+.hero-image {
+  width: var(--img-max-width);
+  height: auto; /* Keeps the image ratio */
 }
 
 .hero h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  position: absolute;
+  top: 20%; /* Adjusts vertical alignment */
+  left: 50%; /* Centers horizontally */
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px;
 }
 
-.hero p {
-  font-size: 18px;
-  margin-bottom: 40px;
+.hero article {
+  position: absolute;
+  bottom: 10%; /* Moves the article up */
+  left: 50%; /* Centers the article */
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+  padding: 15px;
+  border-radius: 8px;
 }
 
+.hero article img {
+  float: right; /* Floats the client image to the right */
+  width: 50px; /* Client image size */
+}
+
+/* Section Styles */
 .history {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  margin-top: 40px;
+  padding: 2rem;
+  background-color: var(--secondary-color); /* Light background */
 }
 
-.history img {
-  width: 100%;
-  height: auto;
+.history h2 {
+  text-align: center;
 }
 
 .adventures {
-  margin-top: 40px;
+  padding: 2rem;
+  background-color: white; /* Regular white background */
 }
 
-.adventure-images {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.adventure-images figure {
-  margin: 0;
-  width: 18%;
-}
-
-.adventure-images img {
-  width: 100%;
-  height: auto;
-}
-
-.adventure-images figcaption {
+.adventures h2 {
   text-align: center;
-  margin-top: 10px;
 }
 
+.adventure-list {
+  display: flex; /* Flexbox for adventure images */
+  justify-content: space-around; /* Space between images */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.adventure-list figure {
+  margin: 10px;
+  text-align: center; /* Center captions */
+}
+
+.adventure-list img {
+  width: 180px; /* Set a consistent size */
+  height: auto; /* Keep aspect ratio */
+}
+
+/* Footer Styles */
 footer {
-  background-color: var(--primary-color);
+  background-color: var(--footer-color);
   color: white;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 40px;
+  padding: 1rem;
+  text-align: center;
 }
 
-.sociallinks {
+.social-links {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center; /* Centers social links */
 }
 
-.sociallinks img {
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
+.social-links a {
+  margin: 0 10px; /* Space between icons */
+  text-decoration: none; /* Remove underline from social icon links */
+}
+
+.social-links img {
+  width: 30px; /* Size for social media icons */
 }
