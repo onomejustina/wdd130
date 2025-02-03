@@ -1,151 +1,63 @@
-/* Root Variables */
-:root {
-  --primary-color: #004080; /* Dark blue */
-  --secondary-color: #f0f8ff; /* Light blue */
-  --text-color: #333; /* Dark grey for text */
-  --footer-color: #004080; /* Dark blue for footer */
-  --img-max-width: 100%; /* Responsive images */
+/* General Styles for the Contact Page */
+.contact-info,
+.employees,
+.contact-form {
+    padding: 2rem;
+    background-color: white; /* Regular white background for sections */
+    margin-bottom: 2rem; /* Space between sections */
 }
 
-/* General Styles */
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  max-width: 1200px; /* Limits width for easier design */
-  margin: 0 auto; /* Centers the body content */
+.contact-info h2,
+.employees h2,
+.contact-form h2 {
+    text-align: center; /* Center section titles */
 }
 
-/* Header Styles */
-header {
-  display: grid;
-  grid-template-columns: auto 1fr auto; /* Responsive grid for logo, title, and nav */
-  align-items: center;
-  padding: 1rem;
-  background-color: var(--primary-color);
-  color: white;
+.employee-list {
+    display: flex;
+    justify-content: space-around; /* Space between employee figures */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
-header .logo {
-  width: 70px; /* Logo size */
+.employee-img {
+    width: 120px; /* Set a consistent width */
+    height: auto; /* Keep aspect ratio */
 }
 
-header h1 {
-  color: white;
-  text-align: center;
+form {
+    max-width: 600px; /* Limit form width */
+    margin: auto; /* Center the form */
 }
 
-nav {
-  margin-left: auto; /* Push navigation to the right */
+label {
+    display: block; /* Make labels block-level for better spacing */
+    margin-bottom: 5px; /* Space below labels */
 }
 
-nav ul {
-  display: flex; /* Use Flexbox for horizontal layout */
-  list-style: none;
-  padding: 0;
-  margin: 0;
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width for inputs & textarea */
+    padding: 10px; /* Padding inside input fields */
+    margin-bottom: 10px; /* Space below inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
 }
 
-nav ul li {
-  margin-left: 20px;
+fieldset {
+    border: none; /* Remove default fieldset border */
+    margin-bottom: 10px; /* Space below fieldset */
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
+button {
+    background-color: #004080; /* Button background color */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
 }
 
-/* Hero Section Styles */
-.hero {
-  position: relative;
-  text-align: center;
-  overflow: hidden; /* Ensure no image overflow */
-}
-
-.hero-image {
-  width: var(--img-max-width);
-  height: auto; /* Keeps the image ratio */
-}
-
-.hero h1 {
-  position: absolute;
-  top: 20%; /* Adjusts vertical alignment */
-  left: 50%; /* Centers horizontally */
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 2.5rem;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  padding: 10px;
-}
-
-.hero article {
-  position: absolute;
-  bottom: 10%; /* Moves the article up */
-  left: 50%; /* Centers the article */
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.hero article img {
-  float: right; /* Floats the client image to the right */
-  width: 50px; /* Client image size */
-}
-
-/* Section Styles */
-.history {
-  padding: 2rem;
-  background-color: var(--secondary-color); /* Light background */
-}
-
-.history h2 {
-  text-align: center;
-}
-
-.adventures {
-  padding: 2rem;
-  background-color: white; /* Regular white background */
-}
-
-.adventures h2 {
-  text-align: center;
-}
-
-.adventure-list {
-  display: flex; /* Flexbox for adventure images */
-  justify-content: space-around; /* Space between images */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-}
-
-.adventure-list figure {
-  margin: 10px;
-  text-align: center; /* Center captions */
-}
-
-.adventure-list img {
-  width: 180px; /* Set a consistent size */
-  height: auto; /* Keep aspect ratio */
-}
-
-/* Footer Styles */
-footer {
-  background-color: var(--footer-color);
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center; /* Centers social links */
-}
-
-.social-links a {
-  margin: 0 10px; /* Space between icons */
-  text-decoration: none; /* Remove underline from social icon links */
-}
-
-.social-links img {
-  width: 30px; /* Size for social media icons */
+button:hover {
+    background-color: #003366; /* Darker shade on hover */
 }

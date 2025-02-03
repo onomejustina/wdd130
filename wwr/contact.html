@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Wild Rapids Adventures</title>
+    <meta name="description" content="Get in touch with Wild Rapids Adventures for inquiries about our rafting services, trips, and reservations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Wild Rapids Adventures Logo" class="logo">
+        <h1>Wild Rapids Adventures</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-info">
+            <h2>Contact Us</h2>
+            <p><strong>Address:</strong> 123 River Road, Delta State, Nigeria</p>
+            <p><strong>Phone:</strong> +234 123 456 7890 | +234 098 765 4321</p>
+            <p><strong>Email:</strong> info@wildrapidsadventures.com</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345091485!2d144.9537353153187!3d-37.81627997975129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x6ad642af0d59c835%3A0x5f8c8f32b2c40d75!2sWild%20Rapids%20Adventures!5e0!3m2!1sen!2sng!4v1624115361546!5m2!1sen!2sng"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        <section class="employees">
+            <h2>Meet Our Team</h2>
+            <div class="employee-list">
+                <figure>
+                    <img src="images/employee1.jpg" alt="Team Member 1" class="employee-img">
+                    <figcaption>Emeke Fortune - Head Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee2.jpg" alt="Team Member 2" class="employee-img">
+                    <figcaption>Samuel Rita- Trip Coordinator</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee3.jpg" alt="Team Member 3" class="employee-img">
+                    <figcaption>Imogu Precious - Safety Expert</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <fieldset>
+                    <legend>Purpose of Message:</legend>
+                    <label><input type="radio" name="purpose" value="General Inquiry" required> General Inquiry</label>
+                    <label><input type="radio" name="purpose" value="Reservation Question"> Reservation Question</label>
+                    <label><input type="radio" name="purpose" value="Website Suggestion"> Website Suggestion</label>
+                </fieldset>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <label><input type="checkbox" name="subscribe"> Please subscribe me to the monthly newsletter</label>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Wild Rapids Adventures | Samuel Justina Onome</p>
+        <nav class="social-links">
+            <a href="https://facebook.com"><img src="images/facebook.jpg" alt="Facebook"></a>
+            <a href="https://twitter.com"><img src="images/twitter.jpg" alt="Twitter"></a>
+            <a href="https://instagram.com"><img src="images/instagram.jpg" alt="Instagram"></a>
+        </nav>
+        <p><a href="link-to-your-wireframe-image" target="_blank">View Contact Us Wireframe</a></p>
+    </footer>
+</body>
+</html>
