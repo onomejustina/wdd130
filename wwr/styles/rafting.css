@@ -7,208 +7,242 @@
   --img-max-width: 100%; /* Responsive images */
 }
 
-/* General Styles */
 body {
   font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
   margin: 0;
-  padding: 0;
-  max-width: 1200px; /* Limits width for easier design */
-  margin: 0 auto; /* Centers the body content */
 }
 
-/* Header Styles */
 header {
-  display: grid;
-  grid-template-columns: auto 1fr auto; /* Responsive grid for logo, title, and nav */
-  align-items: center;
-  padding: 1rem;
   background-color: var(--primary-color);
   color: white;
 }
 
-header .logo {
-  width: 70px; /* Logo size */
+.header-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Adjust columns as needed */
+  align-items: center;
+  padding: 1rem;
 }
 
-header h1 {
-  color: white;
+#logo {
+  max-width: 100px; /* Logo size */
+}
+
+h1 {
   text-align: center;
+  font-size: 2rem; /* Increased font size for visibility */
 }
 
 nav {
-  margin-left: auto; /* Push navigation to the right */
+  display: flex; /* Use flexbox for horizontal navigation */
 }
 
 nav ul {
-  display: flex; /* Use Flexbox for horizontal layout */
-  list-style: none;
+  display: flex; /* Flex container for nav items */
+  list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
 nav ul li {
-  margin-left: 20px;
+  margin-left: 20px; /* Space between nav items */
 }
 
-nav ul li a {
+nav a {
   color: white;
   text-decoration: none;
+  font-size: 1.1rem; /* Adjust font size */
 }
 
-/* Hero Section Styles */
 .hero {
-  position: relative;
-  text-align: center;
-  overflow: hidden; /* Ensure no image overflow */
+  position: relative; /* Establishes a positioning context for children */
 }
 
 .hero-image {
-  width: var(--img-max-width);
-  height: auto; /* Keeps the image ratio */
+  width: 100%; /* Ensures the image fills the container */
+  height: auto; /* Keeps aspect ratio */
 }
 
-.hero h1 {
-  position: absolute;
-  top: 20%; /* Adjusts vertical alignment */
-  left: 50%; /* Centers horizontally */
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 2.5rem;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  padding: 10px;
+.hero-overlay {
+  position: absolute; /* Absolutely position in relation to the .hero div */
+  top: 50%; /* Move down to the center */
+  left: 50%; /* Move in from left to center */
+  transform: translate(-50%, -50%); /* Adjust positioning to center exactly */
+  color: white; /* Text color (adjust as needed) */
+  text-align: center; /* Center the text */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: dark background with transparency for better readability */
+  padding: 20px; /* Padding for text container */
+  border-radius: 10px; /* Optional: rounded corners */
 }
 
-.hero article {
-  position: absolute;
-  bottom: 10%; /* Moves the article up */
-  left: 50%; /* Centers the article */
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
-  padding: 15px;
-  border-radius: 8px;
+.content {
+  padding: 20px;
 }
 
-.hero article img {
-  float: right; /* Floats the client image to the right */
-  width: 50px; /* Client image size */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligns items to the start of the flex container */
+  margin-bottom: 20px;
 }
 
-/* Section Styles */
+.client-image {
+  width: 120px; /* Adjust client image size */
+  height: auto; /* Keep aspect ratio */
+  border-radius: 50%; /* Circular image */
+  margin-right: 15px;
+}
+
 .history {
-  padding: 2rem;
-  background-color: var(--secondary-color); /* Light background */
+  margin: 20px 0; /* Uniform margin for separation */
 }
 
-.history h2 {
-  text-align: center;
+.adventure {
+  margin-bottom: 20px;
 }
 
-.adventures {
-  padding: 2rem;
-  background-color: white; /* Regular white background */
+.adventure-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Five images in a row */
+  gap: 10px; /* Space between images */
 }
 
-.adventures h2 {
-  text-align: center;
+.adventure-gallery figure {
+  margin: 0; /* Reset margin */
 }
 
-.adventure-list {
-  display: flex; /* Flexbox for adventure images */
-  justify-content: space-around; /* Space between images */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-}
-
-.adventure-list figure {
-  margin: 10px;
-  text-align: center; /* Center captions */
-}
-
-.adventure-list img {
-  width: 180px; /* Set a consistent size */
+.adventure-gallery img {
+  width: 100%; /* Full width of grid cell */
   height: auto; /* Keep aspect ratio */
 }
 
-/* Footer Styles */
 footer {
-  background-color: var(--footer-color);
-  color: white;
+  text-align: center;
   padding: 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.sociallinks {
+  display: flex;
+  justify-content: center; /* Center social links */
+}
+
+.sociallinks a {
+  margin: 0 10px; /* Space between social icons */
+}
+
+.sociallinks img {
+  width: 30px; /* Adjust size of social icons */
+  height: auto;
+}
+
+.sociallinks a:hover {
+  opacity: 0.7; /* Hover effect */
+}
+
+.contact-info, .map, .employee-profiles, .contact-form {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc; /* Optional for visual separation */
+  border-radius: 10px;
+  background-color: #f9f9f9; /* Light background for sections */
+}
+
+.employee {
+  display: inline-block;
+  margin: 10px;
   text-align: center;
 }
 
-.social-links {
+.employee-image {
+  width: 100px; /* Set an appropriate size for images */
+  height: auto;
+}
+
+.contact-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: calc(100% - 20px); /* Full width with some padding */
+  padding: 10px;
+}
+
+.contact-form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF; /* Button background color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3; /* Darker on hover */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+.header-container {
   display: flex;
-  justify-content: center; /* Centers social links */
+  justify-content: space-between;
+  align-items: center;
 }
 
-.social-links a {
-  margin: 0 10px; /* Space between icons */
-  text-decoration: none; /* Remove underline from social icon links */
+.hero {
+  position: relative;
 }
 
-.social-links img {
-  width: 30px; /* Size for social media icons */
-}
-/* General Styles for the Contact Page */
-.contact-info,
-.employees,
-.contact-form {
-    padding: 2rem;
-    background-color: white; /* Regular white background for sections */
-    margin-bottom: 2rem; /* Space between sections */
+.hero-image {
+  width: 100%; /* Full width of container */
+  height: auto;
 }
 
-.contact-info h2,
-.employees h2,
-.contact-form h2 {
-    text-align: center; /* Center section titles */
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
 }
 
-.employee-list {
-    display: flex;
-    justify-content: space-around; /* Space between employee figures */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+.newsletter {
+  text-align: center;
+  margin: 2em 0;
 }
 
-.employee-img {
-    width: 120px; /* Set a consistent width */
-    height: auto; /* Keep aspect ratio */
+.trip-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px;
 }
 
-form {
-    max-width: 600px; /* Limit form width */
-    margin: auto; /* Center the form */
+.trip {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
 }
 
-label {
-    display: block; /* Make labels block-level for better spacing */
-    margin-bottom: 5px; /* Space below labels */
+.equipment {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%; /* Full width for inputs & textarea */
-    padding: 10px; /* Padding inside input fields */
-    margin-bottom: 10px; /* Space below inputs */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 4px; /* Rounded corners */
-}
-
-fieldset {
-    border: none; /* Remove default fieldset border */
-    margin-bottom: 10px; /* Space below fieldset */
-}
-
-button {
-    background-color: #004080; /* Button background color */
-    color: white; /* White text */
-    padding: 10px 20px; /* Padding for button */
-    border: none; /* No border */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
-}
-
-button:hover {
-    background-color: #003366; /* Darker shade on hover */
+footer {
+  margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
+    padding: 1rem 0;
 }
