@@ -1,79 +1,73 @@
-/* Root Variables */
 :root {
-  --primary-color: #004080; /* Dark blue */
-  --secondary-color: #f0f8ff; /* Light blue */
-  --text-color: #333; /* Dark grey for text */
-  --footer-color: #004080; /* Dark blue for footer */
-  --img-max-width: 100%; /* Responsive images */
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --text-color: #212529;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   margin: 0;
+  color: var(--text-color);
 }
 
 header {
   background-color: var(--primary-color);
   color: white;
+  padding: 0.5rem 1rem; 
 }
 
 .header-container {
-  display: grid;
-  grid-template-columns: auto 1fr auto; /* Adjust columns as needed */
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem;
 }
 
 #logo {
-  max-width: 100px; /* Logo size */
+  max-width: 100px;
 }
 
 h1 {
-  text-align: center;
-  font-size: 2rem; /* Increased font size for visibility */
-}
-
-nav {
-  display: flex; /* Use flexbox for horizontal navigation */
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 nav ul {
-  display: flex; /* Flex container for nav items */
-  list-style-type: none;
+  display: flex;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
-nav ul li {
-  margin-left: 20px; /* Space between nav items */
+nav li {
+  margin-left: 20px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 1.1rem; /* Adjust font size */
+  font-size: 1rem;
 }
 
 .hero {
-  position: relative; /* Establishes a positioning context for children */
+  position: relative;
 }
 
 .hero-image {
-  width: 100%; /* Ensures the image fills the container */
-  height: auto; /* Keeps aspect ratio */
+  width: 100%;
+  height: auto;
 }
 
 .hero-overlay {
-  position: absolute; /* Absolutely position in relation to the .hero div */
-  top: 50%; /* Move down to the center */
-  left: 50%; /* Move in from left to center */
-  transform: translate(-50%, -50%); /* Adjust positioning to center exactly */
-  color: white; /* Text color (adjust as needed) */
-  text-align: center; /* Center the text */
-  background-color: rgba(0, 0, 0, 0.5); /* Optional: dark background with transparency for better readability */
-  padding: 20px; /* Padding for text container */
-  border-radius: 10px; /* Optional: rounded corners */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .content {
@@ -83,19 +77,15 @@ nav a {
 .intro {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Aligns items to the start of the flex container */
+  justify-content: flex-start;
   margin-bottom: 20px;
 }
 
 .client-image {
-  width: 120px; /* Adjust client image size */
-  height: auto; /* Keep aspect ratio */
-  border-radius: 50%; /* Circular image */
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
   margin-right: 15px;
-}
-
-.history {
-  margin: 20px 0; /* Uniform margin for separation */
 }
 
 .adventure {
@@ -104,17 +94,17 @@ nav a {
 
 .adventure-gallery {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Five images in a row */
-  gap: 10px; /* Space between images */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
 }
 
 .adventure-gallery figure {
-  margin: 0; /* Reset margin */
+  margin: 0;
 }
 
 .adventure-gallery img {
-  width: 100%; /* Full width of grid cell */
-  height: auto; /* Keep aspect ratio */
+  width: 100%;
+  height: auto;
 }
 
 footer {
@@ -126,28 +116,29 @@ footer {
 
 .sociallinks {
   display: flex;
-  justify-content: center; /* Center social links */
+  justify-content: center;
+  align-items: center;
 }
 
 .sociallinks a {
-  margin: 0 10px; /* Space between social icons */
+  margin: 0 10px;
 }
 
 .sociallinks img {
-  width: 30px; /* Adjust size of social icons */
+  width: 30px;
   height: auto;
 }
 
 .sociallinks a:hover {
-  opacity: 0.7; /* Hover effect */
+  opacity: 0.7;
 }
 
 .contact-info, .map, .employee-profiles, .contact-form {
   margin: 20px;
   padding: 20px;
-  border: 1px solid #ccc; /* Optional for visual separation */
+  border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: #f9f9f9; /* Light background for sections */
+  background-color: #f9f9f9;
 }
 
 .employee {
@@ -157,7 +148,7 @@ footer {
 }
 
 .employee-image {
-  width: 100px; /* Set an appropriate size for images */
+  width: 100px;
   height: auto;
 }
 
@@ -168,14 +159,14 @@ footer {
 
 .contact-form input,
 .contact-form textarea {
-  width: calc(100% - 20px); /* Full width with some padding */
+  width: calc(100% - 20px);
   padding: 10px;
 }
 
 .contact-form button {
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #007BFF; /* Button background color */
+  background-color: #007BFF;
   color: white;
   border: none;
   border-radius: 5px;
@@ -183,36 +174,7 @@ footer {
 }
 
 .contact-form button:hover {
-  background-color: #0056b3; /* Darker on hover */
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hero {
-  position: relative;
-}
-
-.hero-image {
-  width: 100%; /* Full width of container */
-  height: auto;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
+  background-color: #0056b3;
 }
 
 .newsletter {
@@ -238,11 +200,4 @@ body {
   padding: 20px;
   border: 1px solid #ccc;
   background-color: #f9f9f9;
-}
-
-footer {
-  margin-top: 15px;
-    border-top: 1px solid #000;
-    text-align: center;
-    padding: 1rem 0;
 }
